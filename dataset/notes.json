@@ -1,0 +1,29 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Aeroplane"
+    },
+    {
+      "id": 1,
+      "name": "Bus"
+    },
+    {
+      "id": 2,
+      "name": "Car"
+    },
+    {
+      "id": 3,
+      "name": "Traffic Light"
+    },
+    {
+      "id": 4,
+      "name": "Truck"
+    }
+  ],
+  "info": {
+    "year": 2026,
+    "version": "1.0",
+    "contributor": "Label Studio"
+  }
+}

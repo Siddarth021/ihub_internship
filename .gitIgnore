@@ -3,12 +3,15 @@
 env/
 venv/
 .venv/
+labelstudio_env/
+
 
 # Python cache files
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.pt
 
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints/
