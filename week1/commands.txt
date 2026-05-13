@@ -1,0 +1,54 @@
+## Command Used
+
+```
+ffmpeg -i video.mp4 -vf fps=1 frames\image_%03d.jpg
+```
+
+## Output
+
+* Multiple images successfully extracted from the video.
+* Frames stored in the `frames` directory.
+
+## Sample Output Files
+
+```
+frames/
+├── image_001.jpg
+├── image_002.jpg
+├── image_003.jpg
+```
+
+
+## YouTube Video Used
+
+```
+https://www.youtube.com/watch?v=GFCvD76qwPA
+```
+
+---
+
+# Task 2 - Generate 30 FPS Frames and Reconstruct Video
+
+## Step 1 - Extract Frames
+```
+ffmpeg -ss 00:00:00 -t 00:01:00 -i video.mp4 -vf fps=30 frames_30fps\frame_%04d.jpg
+```
+
+## Step 2 - Convert Images Back to Video
+```
+ffmpeg -framerate 30 -i frames_30fps\frame_%04d.jpg -c:v libx264 -pix_fmt yuv420p output_video_1min_30fps.mp4
+```
+
+---
+
+# Task 3 - Merge Audio with Video
+
+## Step 1 - Clip Audio to 1 Minute
+```
+ffmpeg -i inception_audio.mp3 -t 00:01:00 inception_audio_1min.mp3
+```
+
+## Step 2 - Merge Audio with Video
+```
+ffmpeg -i output_video_1min_30fps.mp4 -i inception_audio_1min.mp3 -c:v copy -c:a aac -shortest final_video_with_audio.mp4
+```
