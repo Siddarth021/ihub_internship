@@ -1,12 +1,16 @@
 path: ./dataset
 
+# train: images/train
+# val: images/val
+# test: images/test
 train: images/train
 val: images/val
 test: images/test
 
+
 names:
   0: Car
   1: Truck
-  2: Traffic Light
-  3: Bus
-  4: Aeroplane 
+  # 2: Traffic Light
+  # 3: Bus
+  # 4: Aeroplane 
